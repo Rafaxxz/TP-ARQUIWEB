@@ -42,6 +42,7 @@ public class OrganizadorController {
         return new ResponseEntity<>(organizadoresDTO, HttpStatus.OK);
     }
 
+
     @PostMapping
     public ResponseEntity<OrganizadorDTO> registrar(@RequestBody OrganizadorDTO organizadorDTO) {
         Organizador organizador = modelMapper.map(organizadorDTO, Organizador.class);
