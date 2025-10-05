@@ -45,15 +45,17 @@ Una vez iniciada la aplicación, accede a Swagger UI:
 
 ## 🌐 Despliegue en Render
 
-Para desplegar esta aplicación en Render.com, consulta la guía detallada:
+Para desplegar esta aplicación en Render.com, tienes dos opciones:
 
-**📖 [RENDER_DEPLOYMENT_GUIDE.md](RENDER_DEPLOYMENT_GUIDE.md)**
+1. **Guía Rápida**: 🚀 [RENDER_QUICK_START.md](RENDER_QUICK_START.md) - Pasos esenciales en 5 minutos
+2. **Guía Completa**: 📖 [RENDER_DEPLOYMENT_GUIDE.md](RENDER_DEPLOYMENT_GUIDE.md) - Guía detallada paso a paso
 
-La guía incluye:
+Las guías incluyen:
 - Configuración de base de datos PostgreSQL
 - Variables de entorno necesarias
 - Pasos de despliegue
 - Solución de problemas comunes
+- Cambios necesarios en application.properties
 
 ## 📖 Documentación Adicional
 
