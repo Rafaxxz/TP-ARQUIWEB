@@ -74,6 +74,8 @@ git push origin main
 
 ## Paso 3: Crear el Web Service en Render
 
+### Opción A: Usando la Interfaz Web (Recomendado para principiantes)
+
 1. En el dashboard de Render, click en **"New +"** y selecciona **"Web Service"**
 2. Conecta tu repositorio de GitHub:
    - Si es la primera vez, autoriza a Render para acceder a tu GitHub
@@ -86,6 +88,16 @@ git push origin main
    - **Build Command**: `./mvnw clean install -DskipTests`
    - **Start Command**: `java -jar target/TF_ArquiWeb-0.0.1-SNAPSHOT.jar`
    - **Plan**: Free (para pruebas) o un plan pagado
+
+### Opción B: Usando render.yaml (Infraestructura como Código)
+
+Si prefieres automatizar el despliegue:
+
+1. El repositorio incluye un archivo `render.yaml` con la configuración
+2. En Render, ve a **"New +"** → **"Blueprint"**
+3. Conecta tu repositorio
+4. Render creará automáticamente la base de datos y el web service
+5. Solo necesitarás configurar `JWT_SECRET` manualmente
 
 ## Paso 4: Configurar Variables de Entorno
 

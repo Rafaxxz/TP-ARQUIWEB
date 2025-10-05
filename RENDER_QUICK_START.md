@@ -53,6 +53,10 @@ git push
 
 ### 4. Pasos en Render
 
+**OPCIÓN RÁPIDA**: Usa el archivo `render.yaml` incluido → New + → Blueprint → Conecta repo
+
+**OPCIÓN MANUAL**:
+
 1. **Crear PostgreSQL Database**
    - New + → PostgreSQL
    - Guarda las credenciales (URL, username, password)
