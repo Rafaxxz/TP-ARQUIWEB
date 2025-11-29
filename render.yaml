@@ -1,0 +1,36 @@
+# Archivo de configuración opcional para Render
+# Este archivo permite desplegar la aplicación usando "Infrastructure as Code"
+# Para usarlo, habilita "Blueprint" en tu cuenta de Render
+
+databases:
+  - name: ecominds-db
+    databaseName: db_EcoMind
+    user: ecominds
+    plan: free
+
+services:
+  - type: web
+    name: ecominds-api
+    runtime: java
+    plan: free
+    buildCommand: ./mvnw clean install -DskipTests
+    startCommand: java -jar target/TF_ArquiWeb-0.0.1-SNAPSHOT.jar
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: ecominds-db
+          property: connectionString
+      - key: DB_USERNAME
+        fromDatabase:
+          name: ecominds-db
+          property: user
+      - key: DB_PASSWORD
+        fromDatabase:
+          name: ecominds-db
+          property: password
+      - key: JWT_SECRET
+        generateValue: true
+      - key: JWT_EXPIRATION
+        value: 86400000
+      - key: JAVA_TOOL_OPTIONS
+        value: -Xmx512m
